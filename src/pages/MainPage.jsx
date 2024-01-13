@@ -1,7 +1,12 @@
+import '../MainPage.css';
+
 function MainPage() {
   return (
     <div>
-      <p>메인입니다</p>
+      <div className="flex mainContent">
+        <img src="/images/icon/hc.png" alt='logo image' />
+        <a>START</a>
+      </div>
     </div>
   );
 }

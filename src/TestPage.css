@@ -1,0 +1,36 @@
+
+.Header p{
+    color: #fff;
+}
+.progressBar{
+    width: 90%;
+    margin: 30px auto 70px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    height: 30px;
+    overflow: hidden;
+}
+.progressInner{
+    background: #fff;
+    width: 20%;
+    height: 100%;
+}
+.qustionWrap{
+    position: relative;
+    margin-bottom: 70px;
+    filter: drop-shadow(3px 1px 1px #88b917);
+}
+.qustionWrap .qna{
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    filter: drop-shadow(0.5px 0.7px 0.7px #000000);
+}
+.answerWrap div{
+    border-radius: 5px;
+    padding: 20px;
+    background: #fff;
+}

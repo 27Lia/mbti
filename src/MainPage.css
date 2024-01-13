@@ -1,0 +1,19 @@
+.mainContent{
+    margin-top: 50px;
+    flex-direction: column;
+}
+.mainContent img{
+    width: 90%;
+    margin: 0 auto;
+}
+.mainContent a{
+    margin: 30px auto 0;
+    background: #fff;
+    color: #bbe309;
+    padding: 10px;
+    width: 80%;
+    font-size: 25px;
+    border-radius: 10px;
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 2px;
+}
