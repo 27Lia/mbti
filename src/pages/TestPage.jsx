@@ -1,9 +1,15 @@
-import { useEffect } from "react";
 import "../TestPage.css";
+import { Link, useNavigate } from "react-router-dom";
 import questionData from "../data/questions.json";
 import React, { useState } from "react";
 
 function TestPage() {
+  const navigate = useNavigate();
+
+  const pageMove = () => {
+    navigate("/result");
+  };
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [typeScores, setTypeScores] = useState({
     E: 0,
@@ -42,6 +48,7 @@ function TestPage() {
       console.log(mbtiType);
     }
   };
+
   return (
     <>
       <div className="progressBar">
