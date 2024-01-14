@@ -6,10 +6,6 @@ import React, { useState } from "react";
 function TestPage() {
   const navigate = useNavigate();
 
-  const pageMove = () => {
-    navigate("/result");
-  };
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [typeScores, setTypeScores] = useState({
     E: 0,
@@ -21,7 +17,6 @@ function TestPage() {
     F: 0,
     P: 0,
   });
-  const [result, setResult] = useState("");
 
   const calculateMBTIType = () => {
     const type =
@@ -44,8 +39,7 @@ function TestPage() {
       setCurrentIndex(currentIndex + 1);
     } else {
       const mbtiType = calculateMBTIType();
-      setResult(`테스트 완료, 당신의 MBTI 유형은: ${mbtiType}`);
-      console.log(mbtiType);
+      navigate("/result", { state: { mbtiType: mbtiType } });
     }
   };
 
