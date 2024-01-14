@@ -1,6 +1,8 @@
 {
     "ISTP": {
-        "compatibleTypes": "ESFJ",
+        "compatibleTypes": [
+            "ESFJ"
+        ],
         "members": [
             {
                 "member": "제노",
@@ -9,7 +11,9 @@
         ]
     },
     "ISFJ": {
-        "compatibleTypes": "ESFP",
+        "compatibleTypes": [
+            "ESFP"
+        ],
         "member": [
             {
                 "member": "재민",
@@ -18,16 +22,20 @@
         ]
     },
     "ISFP": {
-        "compatibleTypes": "ENFJ",
+        "compatibleTypes": [
+            "ENFJ"
+        ],
         "member": [
             {
                 "member": "해찬",
-                "description": "당신은 해찬처럼 자유롭고 예술적인 영혼을 가지고 있습니다. 개성이 강하고, 창의적인 표현을 통해 자신만의 독특한 스타일을 만들어냅니다."
+                "description": "해찬처럼 자유롭고 예술적인 영혼을 가지고 있습니다. 개성이 강하고, 창의적인 표현을 통해 자신만의 독특한 스타일을 만들어냅니다."
             }
         ]
     },
     "ISTJ": {
-        "compatibleTypes": "ESFP",
+        "compatibleTypes": [
+            "ESFP"
+        ],
         "member": [
             {
                 "member": "태용",
@@ -36,7 +44,9 @@
         ]
     },
     "INFP": {
-        "compatibleTypes": "ENFJ",
+        "compatibleTypes": [
+            "ENFJ"
+        ],
         "member": [
             {
                 "member": "런줜",
@@ -45,7 +55,9 @@
         ]
     },
     "INFJ": {
-        "compatibleTypes": "ENFP",
+        "compatibleTypes": [
+            "ENFP"
+        ],
         "members": [
             {
                 "member": "마크",
@@ -54,7 +66,9 @@
         ]
     },
     "INTJ": {
-        "compatibleTypes": "ENFP",
+        "compatibleTypes": [
+            "ENFP"
+        ],
         "member": [
             {
                 "member": "루카스",
@@ -63,7 +77,9 @@
         ]
     },
     "INTP": {
-        "compatibleTypes": "ENFP",
+        "compatibleTypes": [
+            "ENFP"
+        ],
         "member": [
             {
                 "member": "도영",
@@ -72,7 +88,9 @@
         ]
     },
     "ESTP": {
-        "compatibleTypes": "ISFJ",
+        "compatibleTypes": [
+            "ISFJ"
+        ],
         "members": [
             {
                 "member": "해찬",
@@ -81,7 +99,9 @@
         ]
     },
     "ESTJ": {
-        "compatibleTypes": "ISFP",
+        "compatibleTypes": [
+            "ISFP"
+        ],
         "member": [
             {
                 "member": "태일",
@@ -90,7 +110,9 @@
         ]
     },
     "ESFJ": {
-        "compatibleTypes": "ISFP",
+        "compatibleTypes": [
+            "ISFP"
+        ],
         "member": [
             {
                 "member": "유타",
@@ -99,7 +121,9 @@
         ]
     },
     "ESFP": {
-        "compatibleTypes": "ISFJ",
+        "compatibleTypes": [
+            "ISFJ"
+        ],
         "member": [
             {
                 "member": "윈윈",
@@ -108,7 +132,9 @@
         ]
     },
     "ENFP": {
-        "compatibleTypes": "ENFP",
+        "compatibleTypes": [
+            "ENFP"
+        ],
         "member": [
             {
                 "member": "재현",
@@ -117,7 +143,9 @@
         ]
     },
     "ENFJ": {
-        "compatibleTypes": "ENFP",
+        "compatibleTypes": [
+            "ENFP"
+        ],
         "member": [
             {
                 "member": "쟈니",
@@ -126,7 +154,9 @@
         ]
     },
     "ENTJ": {
-        "compatibleTypes": "ENFP",
+        "compatibleTypes": [
+            "ENFP"
+        ],
         "member": [
             {
                 "member": "천러",
@@ -135,7 +165,9 @@
         ]
     },
     "ENTP": {
-        "compatibleTypes": "INFJ",
+        "compatibleTypes": [
+            "INFJ"
+        ],
         "member": [
             {
                 "member": "천러",
