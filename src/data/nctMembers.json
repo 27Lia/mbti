@@ -1,7 +1,10 @@
 {
     "ISTP": {
         "compatibleTypes": [
-            "ESFJ"
+            {
+                "type": "ESFJ",
+                "description": "유타처럼 사교적이고 다정한 사람이 어울립니다."
+            }
         ],
         "members": [
             {
@@ -12,7 +15,10 @@
     },
     "ISFJ": {
         "compatibleTypes": [
-            "ESFP"
+            {
+                "type": "ESFP",
+                "description": "윈윈처럼 활기차고 사교적인 사람과 어울립니다."
+            }
         ],
         "member": [
             {
@@ -23,7 +29,10 @@
     },
     "ISFP": {
         "compatibleTypes": [
-            "ENFJ"
+            {
+                "type": "ENFJ",
+                "description": "쟈니처럼 카리스마 있고 영향력이 있는 사람과 어울립니다."
+            }
         ],
         "member": [
             {
@@ -34,7 +43,10 @@
     },
     "ISTJ": {
         "compatibleTypes": [
-            "ESFP"
+            {
+                "type": "ESFP",
+                "description": "윈윈처럼 활기차고 사교적인 사람과 어울립니다."
+            }
         ],
         "member": [
             {
@@ -45,7 +57,10 @@
     },
     "INFP": {
         "compatibleTypes": [
-            "ENFJ"
+            {
+                "type": "ENFJ",
+                "description": "쟈니처럼 카리스마 있고 영향력이 있는 사람과 어울립니다."
+            }
         ],
         "member": [
             {
@@ -56,7 +71,10 @@
     },
     "INFJ": {
         "compatibleTypes": [
-            "ENFP"
+            {
+                "type": "ENFP",
+                "description": "재현처럼 열정적이고 창의적인 사람과 어울립니다."
+            }
         ],
         "members": [
             {
@@ -67,7 +85,10 @@
     },
     "INTJ": {
         "compatibleTypes": [
-            "ENFP"
+            {
+                "type": "ENFP",
+                "description": "재현처럼 열정적이고 창의적인 사람과 어울립니다."
+            }
         ],
         "member": [
             {
@@ -78,7 +99,10 @@
     },
     "INTP": {
         "compatibleTypes": [
-            "ENFP"
+            {
+                "type": "ENFP",
+                "description": "재현처럼 열정적이고 창의적인 사람과 어울립니다."
+            }
         ],
         "member": [
             {
@@ -89,7 +113,10 @@
     },
     "ESTP": {
         "compatibleTypes": [
-            "ISFJ"
+            {
+                "type": "ISFJ",
+                "description": "재민처럼 따뜻하고 보호적인 수호자와 어울립니다."
+            }
         ],
         "members": [
             {
@@ -100,7 +127,10 @@
     },
     "ESTJ": {
         "compatibleTypes": [
-            "ISFP"
+            {
+                "type": "ISFP",
+                "description": "해찬처럼 자유롭고 예술적인 영혼을 가진사람이 어울립니다."
+            }
         ],
         "member": [
             {
@@ -111,7 +141,10 @@
     },
     "ESFJ": {
         "compatibleTypes": [
-            "ISFP"
+            {
+                "type": "ISFP",
+                "description": "해찬처럼 자유롭고 예술적인 영혼을 가진사람이 어울립니다."
+            }
         ],
         "member": [
             {
@@ -122,7 +155,10 @@
     },
     "ESFP": {
         "compatibleTypes": [
-            "ISFJ"
+            {
+                "type": "ISFJ",
+                "description": "재민처럼 따뜻하고 보호적인 수호자와 어울립니다."
+            }
         ],
         "member": [
             {
@@ -133,7 +169,10 @@
     },
     "ENFP": {
         "compatibleTypes": [
-            "ENFP"
+            {
+                "type": "ENFP",
+                "description": "재현처럼 열정적이고 창의적인 사람과 어울립니다."
+            }
         ],
         "member": [
             {
@@ -144,7 +183,10 @@
     },
     "ENFJ": {
         "compatibleTypes": [
-            "ENFP"
+            {
+                "type": "ENFP",
+                "description": "재현처럼 열정적이고 창의적인 사람과 어울립니다."
+            }
         ],
         "member": [
             {
@@ -155,7 +197,10 @@
     },
     "ENTJ": {
         "compatibleTypes": [
-            "ENFP"
+            {
+                "type": "ENFP",
+                "description": "재현처럼 열정적이고 창의적인 사람과 어울립니다."
+            }
         ],
         "member": [
             {
@@ -166,7 +211,10 @@
     },
     "ENTP": {
         "compatibleTypes": [
-            "INFJ"
+            {
+                "type": "INFJ",
+                "description": "마크처럼 창의적이고 사려 깊은사람이 어울립니다."
+            }
         ],
         "member": [
             {
