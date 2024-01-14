@@ -1,5 +1,12 @@
 import '../TestPage.css';
+import { Link, useNavigate } from 'react-router-dom';
+
 function TestPage() {
+  const navigate = useNavigate();
+
+  const pageMove = () => {
+    navigate('/result');
+  };
     return (
       <>
         <div className='progressBar'>
@@ -12,10 +19,10 @@ function TestPage() {
           </div>
           <div className='answerWrap'>
             <div className='mb-8'>
-              <p>당장 달려가 천러에게 시즈니임을 밝히고 하딜간다고 자랑한다 !! </p>
+              <p onClick={pageMove}>당장 달려가 천러에게 시즈니임을 밝히고 하딜간다고 자랑한다 !! </p>
             </div>
             <div>
-              <p>멀리서 멀리서 우리 천러 하면서 바라만 본다..</p>
+              <p onClick={pageMove}>멀리서 멀리서 우리 천러 하면서 바라만 본다..</p>
             </div>
           </div>
         </div>
