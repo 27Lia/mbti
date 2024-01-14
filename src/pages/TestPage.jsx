@@ -53,7 +53,7 @@ function TestPage() {
           <img
             className="textWrap"
             src="/images/icon/Union.png"
-            alt="logo image"
+            alt="logo_image"
           />
           <p className="qna">{questionData[currentIndex].question}</p>
         </div>

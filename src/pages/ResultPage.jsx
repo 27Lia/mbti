@@ -8,7 +8,6 @@ function ResultPage() {
   const navigate = useNavigate();
   // 사용자의 mbti 데이터를 가져옴
   const mbtiInfo = mbtiData[mbtiType];
-  console.log(mbtiInfo);
 
   // 사용자의 mbti 데이터에서 compatibleTypes을 추출
   const compatibleMember = mbtiInfo.compatibleTypes[0].description;
