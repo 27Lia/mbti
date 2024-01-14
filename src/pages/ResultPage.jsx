@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import mbtiData from "../data/nctMembers.json";
+import "../styles/ResultPage.css";
 
 function ResultPage() {
   const location = useLocation();
@@ -25,7 +26,7 @@ function ResultPage() {
       ) : (
         <p>MBTI 유형이 제공되지 않았습니다.</p>
       )}
-      <button className="answerbtn" onClick={() => navigate("/")}>
+      <button className="retry-btn" onClick={() => navigate("/")}>
         다시하기
       </button>
     </div>

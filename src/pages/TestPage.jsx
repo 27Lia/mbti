@@ -1,4 +1,4 @@
-import "../TestPage.css";
+import "../styles/TestPage.css";
 import { useNavigate } from "react-router-dom";
 import questionData from "../data/questions.json";
 import React, { useState } from "react";
