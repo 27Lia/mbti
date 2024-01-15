@@ -7,10 +7,18 @@ function ResultPage() {
   const location = useLocation();
   const mbtiType = location.state?.mbtiType;
   const navigate = useNavigate();
-  // 사용자의 mbti 데이터를 가져옴
   const mbtiInfo = mbtiData[mbtiType];
-  // 사용자의 mbti 데이터에서 compatibleTypes을 추출
   const compatibleMember = mbtiInfo.compatibleTypes[0].description;
+  const baseUrl = "http://localhost:3000";
+
+  const handleCopyClipBoard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert("링크가 복사되었어요.");
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div>
@@ -30,6 +38,12 @@ function ResultPage() {
         <p>MBTI 유형이 제공되지 않았습니다.</p>
       )}
       <br />
+      <button
+        className="retry-btn"
+        onClick={() => handleCopyClipBoard(`${baseUrl}${location.pathname}`)}
+      >
+        공유링크
+      </button>
       <button className="retry-btn" onClick={() => navigate("/")}>
         다시하기
       </button>
