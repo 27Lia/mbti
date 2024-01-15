@@ -43,10 +43,12 @@ function TestPage() {
     }
   };
 
+  const progressWidth = ((currentIndex + 1) / questionData.length) * 100;
+
   return (
     <>
       <div className="progressBar">
-        <div className="progressInner"></div>
+        <div className="progressInner" style={{ width: `${progressWidth}%` }}></div>
       </div>
       <div className="testContent">
         <div className="qustionWrap">

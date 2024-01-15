@@ -12,8 +12,8 @@
 }
 .progressInner{
     background: #fff;
-    width: 20%;
     height: 100%;
+    transition: width 0.5s linear;
 }
 .qustionWrap{
     position: relative;
