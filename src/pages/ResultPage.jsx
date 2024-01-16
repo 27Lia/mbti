@@ -10,6 +10,7 @@ function ResultPage() {
   const mbtiInfo = mbtiData[mbtiType];
   const compatibleMember = mbtiInfo.compatibleTypes[0].description;
   const baseUrl = "https://mbti-one.vercel.app";
+  const memberImg = mbtiInfo.member[0].memberImg;
 
   const handleCopyClipBoard = async (text) => {
     try {
@@ -24,6 +25,7 @@ function ResultPage() {
     <div>
       {mbtiType ? (
         <div>
+          <img className="memberImg" src={mbtiInfo.member[0].memberImg}></img>
           <h1>당신의 유형은 {mbtiInfo.member[0].member}입니다.</h1>
           <br />
           <div>{mbtiInfo.member[0].description}</div>

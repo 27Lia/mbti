@@ -9,6 +9,7 @@
         "member": [
             {
                 "member": "제노",
+                "memberImg" : "/images/member/제노.jpg",
                 "description": "당신은 제노처럼 즉흥적이고 도전적인 모험가. 실용적이고 능력이 뛰어나며, 새로운 경험을 추구합니다."
             }
         ]
@@ -23,6 +24,7 @@
         "member": [
             {
                 "member": "재민",
+                "memberImg" : "/images/member/재민.jpg",
                 "description": "당신은 재민처럼 따뜻하고 보호적인 수호자입니다. 친절하고 신뢰할 수 있으며, 타인을 돌보는 데 능숙합니다."
             }
         ]
@@ -37,6 +39,7 @@
         "member": [
             {
                 "member": "제노",
+                "memberImg" : "/images/member/제노.jpg",
                 "description": "당신은 제노처럼 자유롭고 예술적인 영혼을 가지고 있습니다. 개성이 강하고, 창의적인 표현을 통해 자신만의 독특한 스타일을 만들어냅니다."
             }
         ]
@@ -51,6 +54,7 @@
         "member": [
             {
                 "member": "NCT DREAM",
+                "memberImg" : "/images/member/엔드림.jpg",
                 "description": "당신은 NCT DREAM처럼 신중하고 책임감이 있습니다. 계획적이고 체계적인 접근을 통해 안정성과 질서를 유지하는 데 능숙합니다."
             }
         ]
@@ -65,6 +69,7 @@
         "member": [
             {
                 "member": "지성",
+                "memberImg" : "/images/member/지성.jpg",
                 "description": "당신은 지성처럼 이상주의적이고 열정적입니다. 깊은 감정과 독창적인 생각을 가지고 있으며, 주변 세계에 긍정적인 영향을 끼치고자 합니다."
             }
         ]
@@ -79,6 +84,7 @@
         "member": [
             {
                 "member": "마크",
+                "memberImg" : "/images/member/마크.jpg",
                 "description": "당신은 마크처럼 창의적이고 사려 깊은 리더입니다. 민감하고 이타적이며, 복잡한 문제를 해결하는 데 능숙합니다"
             }
         ]
@@ -93,6 +99,7 @@
         "member": [
             {
                 "member": "양양",
+                "memberImg" : "/images/member/양양.jpg",
                 "description": "당신은 양양처럼 전략적이고 비전이 있습니다. 독창적인 아이디어와 목표를 가지고 있으며, 도전을 두려워하지 않고 새로운 길을 개척합니다."
             }
         ]
@@ -107,6 +114,7 @@
         "member": [
             {
                 "member": "도영",
+                "memberImg" : "/images/member/도영.jpg",
                 "description": "당신은 도영처럼 논리적이고 분석적입니다. 지식에 목마르고, 항상 새로운 것을 배우려는 태도를 가지고 있습니다."
             }
         ]
@@ -121,6 +129,7 @@
         "member": [
             {
                 "member": "해찬",
+                "memberImg" : "/images/member/해찬.jpg",
                 "description": "당신은 해찬처럼 에너지가 넘치고 사교적입니다. 유머 감각이 있고, 중심을 잡는 데 능숙합니다"
             }
         ]
@@ -135,6 +144,7 @@
         "member": [
             {
                 "member": "태일",
+                "memberImg" : "/images/member태일.jpg",
                 "description": "당신은 태일처럼 결단력이 있고 지도력이 뛰어납니다. 강한 의지와 실용적인 접근 방식으로 팀을 이끌고 목표를 달성합니다."
             }
         ]
@@ -149,6 +159,7 @@
         "member": [
             {
                 "member": "유타",
+                "memberImg" : "/images/member/유타.jpg",
                 "description": "당신은 유타처럼 사교적이고 다정합니다. 주변 사람들과 강한 유대를 형성하며, 친절하고 배려 깊은 태도로 모두를 포용합니다."
             }
         ]
@@ -163,6 +174,7 @@
         "member": [
             {
                 "member": "재현",
+                "memberImg" : "/images/member/재현.jpg",
                 "description": "당신은 재현처럼 활기차고 사교적입니다. 사람들과 어울리는 것을 좋아하며, 순간을 즐기고 삶의 재미를 찾습니다."
             }
         ]
@@ -177,6 +189,7 @@
         "member": [
             {
                 "member": "샤오쥔",
+                "memberImg" : "/images/member/샤오쥔.jpg",
                 "description": "당신은 샤오쥔처럼 열정적이고 창의적입니다. 새로운 아이디어와 경험을 탐구하는 것을 좋아하며, 주변 사람들에게 영감을 줍니다"
             }
         ]
@@ -191,6 +204,7 @@
         "member": [
             {
                 "member": "쟈니",
+                "memberImg" : "/images/member/쟈니.jpg",
                 "description": "당신은 쟈니처럼 카리스마 있고 영향력이 있습니다. 사람들을 동기부여하고, 모두를 위한 긍정적인 변화를 추구합니다."
             }
         ]
@@ -205,6 +219,7 @@
         "member": [
             {
                 "member": "천러",
+                "memberImg" : "/images/member/천러.jpg",
                 "description": "당신은 천러처럼 대담하고 야심찬 리더입니다. 결단력 있고, 자신감이 있으며, 목표 달성에 탁월합니다."
             }
         ]
@@ -219,6 +234,7 @@
         "member": [
             {
                 "member": "태용",
+                "memberImg" : "/images/member/태용.jpg",
                 "description": "당신은 태용처럼 발명적이고 독창적입니다. 새롭고 흥미로운 아이디어에 열정을 가지고 있으며, 지적인 도전을 즐깁니다."
             }
         ]

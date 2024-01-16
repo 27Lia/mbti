@@ -1,22 +1,6 @@
-.Header{
-  gap: 13px;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    letter-spacing: 2px;
-    color: #bbe309;
-    font-family: 'Chakra Petch', sans-serif;
 
-}
-.Header img{
-    width: 20%;
-    animation: floating 2s ease-in-out infinite;
-}
-@keyframes floating {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
+.Header p{
+  text-align: center;
+  font-size: 25px;
+  color: #000;
 }
