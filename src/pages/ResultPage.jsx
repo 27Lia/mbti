@@ -9,7 +9,7 @@ function ResultPage() {
   const navigate = useNavigate();
   const mbtiInfo = mbtiData[mbtiType];
   const compatibleMember = mbtiInfo.compatibleTypes[0].description;
-  const baseUrl = "http://localhost:3000";
+  const baseUrl = "https://mbti-one.vercel.app";
 
   const handleCopyClipBoard = async (text) => {
     try {
