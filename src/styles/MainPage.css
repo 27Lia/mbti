@@ -7,14 +7,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-position: center calc(-65px)
+    background-position: center calc(-65px);
+    margin: 0 auto;
+    max-width: 500px;
 }
 .startBtn{
     padding: 10px 30px;
     border: 2px solid #000;
     border-radius: 30px;
     position: absolute;
-    bottom: 5px;
+    bottom: 8%;
     left: 50%;
     letter-spacing: 5px;
     transform: translate(-50%, -5px);
@@ -22,3 +24,9 @@
     background: linear-gradient(to left top, #ffffff, #b0ff27);
     box-shadow: 1px 2px 4px #000000;
 }
+@media screen and (max-width: 500px) {
+    .startBtn{
+        bottom: 1%;
+        transform: translate(-50%, -5px);
+    }
+  }
