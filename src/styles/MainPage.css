@@ -7,14 +7,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-position: center calc(-57px)
+    background-position: center calc(-63px)
 }
 .startBtn{
     padding: 10px 3cqmin;
     border: 2px solid #000;
     border-radius: 30px;
     position: absolute;
-    bottom: 15px;
+    bottom: 5px;
     left: 50%;
     letter-spacing: 5px;
     transform: translate(-50%, -15px);
