@@ -1,11 +1,61 @@
-/* 
-  .retry-btn {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border-radius: 4px;
-    background-color: #fff;
+.resultPage{
+  background-image: url(/public/images/icon/bg_img.jpg);
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 70px 50px;
+  text-align: center;
+}
+.memberImg{
+  border-radius: 20px;
+  width: 300px;
+  height: 320px;
+  object-fit: cover;
+}
+.resultText{
+  padding: 30px 20px 20px;
+  margin-top: 45px;
+  border-radius: 20px;
+  background: rgb(226, 255, 159);
+  border: 2px solid #000;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: 1px 1px 1px 2px #000000;
+}
+@keyframes floatUp {
+  0% {
+    transform: translate(-50%, 0);
   }
-  .memberImg{
-    width: 300px;
-    margin: 10px auto;
-  }   */
+  50% {
+    transform: translate(-50%, 5px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.heart {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: -20px;
+  transform: translate(-50%);
+  animation: floatUp 2s infinite; 
+}
+strong{
+  font-size: 18px;
+}
+.retry-btn{
+  border: 1px solid #000;
+  background: #fff;
+  padding: 5px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #bbe309;
+  box-shadow: 0.5px 0.5px 0.5px 1px #000000;
+}
+.retry-btn:first-of-type{
+  margin-right: 20px;
+}

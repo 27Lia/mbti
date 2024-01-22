@@ -22,19 +22,22 @@ function ResultPage() {
   };
 
   return (
-    <div>
+    <div className="resultPage">
       {mbtiType ? (
         <div>
-          <img className="memberImg" src={mbtiInfo.member[0].memberImg}></img>
-          <h1>당신의 유형은 {mbtiInfo.member[0].member}입니다.</h1>
-          <br />
-          <div>{mbtiInfo.member[0].description}</div>
-          <br />
-          <h2>
-            당신과 어울리는 NCT 멤버는 다음과 같습니다
-            <br />
-            {compatibleMember}
-          </h2>
+            <img className="memberImg" src={mbtiInfo.member[0].memberImg}></img>
+            <div className="resultText">
+            <img className="heart" src="/images/icon/heart.png"/>
+              <h1>당신의 유형은 <strong>{mbtiInfo.member[0].member} </strong>입니다.</h1>
+              <br />
+              <div>{mbtiInfo.member[0].description}</div>
+              <br />
+              <h2>
+                당신과 어울리는 NCT 멤버는
+                <br />
+                {compatibleMember}
+              </h2>
+            </div>
         </div>
       ) : (
         <p>MBTI 유형이 제공되지 않았습니다.</p>

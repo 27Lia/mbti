@@ -62,18 +62,13 @@ function TestPage() {
         <div className="mb-8">
           <div className="answerWrap">
           {questionData[currentIndex].options.map((option, index) => (
-            <button
+            <div
               className="answerbtn"
               key={index}
               onClick={() => handleOptionSelect(option.type)}
             >
-              <img
-                className="answerWrap"
-                src="/images/icon/answer.png"
-                alt={`answer_option_${index}`}
-              />
               <p>{option.answer}</p>
-            </button>
+            </div>
           ))}
           </div>
         </div>
