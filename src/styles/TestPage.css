@@ -4,7 +4,7 @@
 .testPage{
     background-image: url(/public/images/icon/bg_img.jpg);
     height: calc(var(--vh, 1vh) * 100);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     max-width: 425px;
