@@ -7,7 +7,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-position: center calc(-63px)
+    background-position: center calc(-65px)
 }
 .startBtn{
     padding: 10px 30px;
@@ -17,7 +17,7 @@
     bottom: 5px;
     left: 50%;
     letter-spacing: 5px;
-    transform: translate(-50%, -7px);
+    transform: translate(-50%, -5px);
     font-weight: bold;
     background: linear-gradient(to left top, #ffffff, #b0ff27);
     box-shadow: 1px 2px 4px #000000;
