@@ -13,7 +13,7 @@
     padding: 10px;
 }
 .progressBar{
-    width: 350px;
+    width: 260px;
     position: absolute;
     top: 17%;
     left: 50%;
@@ -21,7 +21,7 @@
     border: 3px solid #fff;
     border-radius: 10px;
     padding: 2px;
-    height: 30px;
+    height: 25px;
     overflow: hidden;
 }
 .progressInner{
@@ -32,13 +32,14 @@
 }
 .qustionWrap{
     position: relative;
-    margin-top: 210px;
+    margin-top: 150px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .textWrap{
-    width: 100vw;
+    width: 80vw;
     position: relative;
+    margin: 0 auto;
 }
 .qustionWrap .qna{
     width: 100%;
@@ -46,13 +47,16 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding: 37px;
-    font-size: 20px;
+    padding: 45px;
+    font-size: 16px;
     filter: drop-shadow(0.5px 0.7px 0.7px #000000);
 }
 .answerbtn{
     position: relative;
-    height:100px;
+    height: 100px;
+    width: 80vw;
+    margin: 0 auto;
+    font-size: 14px;
     padding: 40px;
     display: flex;
     align-items: center;
@@ -63,6 +67,4 @@
     background-position: center;
     background-image: url(/public/images/icon/answer.png);
 }
-.answerbtn:first-of-type{
-    margin-bottom: 20px;
-}
+
