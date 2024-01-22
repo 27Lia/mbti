@@ -1,6 +1,9 @@
+:root {
+  --vh: 100%;
+}
 .resultPage{
   background-image: url(/public/images/icon/bg_img.jpg);
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
