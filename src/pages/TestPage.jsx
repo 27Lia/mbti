@@ -46,7 +46,7 @@ function TestPage() {
   const progressWidth = ((currentIndex + 1) / questionData.length) * 100;
 
   return (
-    <>
+    <div className="testPage">
       <div className="progressBar">
         <div className="progressInner" style={{ width: `${progressWidth}%` }}></div>
       </div>
@@ -54,26 +54,31 @@ function TestPage() {
         <div className="qustionWrap">
           <img
             className="textWrap"
-            src="/images/icon/Union.png"
+            src="/images/icon/question.png"
             alt="logo_image"
           />
           <p className="qna">{questionData[currentIndex].question}</p>
         </div>
         <div className="mb-8">
           <div className="answerWrap">
-            {questionData[currentIndex].options.map((option, index) => (
-              <button
-                className="answerbtn"
-                key={index}
-                onClick={() => handleOptionSelect(option.type)}
-              >
-                {option.answer}
-              </button>
-            ))}
+          {questionData[currentIndex].options.map((option, index) => (
+            <button
+              className="answerbtn"
+              key={index}
+              onClick={() => handleOptionSelect(option.type)}
+            >
+              <img
+                className="answerWrap"
+                src="/images/icon/answer.png"
+                alt={`answer_option_${index}`}
+              />
+              <p>{option.answer}</p>
+            </button>
+          ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

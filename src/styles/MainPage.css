@@ -1,4 +1,24 @@
-.mainContent{
+.mainPage{
+    background-image: url(/public/images/icon/main_img.jpg);
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.startBtn{
+    padding: 10px 3cqmin;
+    border: 2px solid #000;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    letter-spacing: 5px;
+    transform: translate(-50%, -10%);
+    font-weight: bold;
+    background: linear-gradient(to left top, #ffffff, #b0ff27);
+    box-shadow: 1px 2px 4px #000000;
+}
+/* .mainContent{
     margin-top: 50px;
     flex-direction: column;
 }
@@ -16,4 +36,4 @@
     border-radius: 10px;
     font-family: 'Chakra Petch', sans-serif;
     letter-spacing: 2px;
-}
+} */

@@ -1,20 +1,68 @@
-
-.Header p{
-    color: #fff;
+.testPage{
+    background-image: url(/public/images/icon/bg_img.jpg);
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    padding: 10px;
 }
 .progressBar{
-    width: 90%;
-    margin: 30px auto 70px;
+    width: 80vw;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -30px);
     border: 3px solid #fff;
     border-radius: 10px;
+    padding: 2px;
     height: 30px;
     overflow: hidden;
 }
 .progressInner{
+    border-radius: 5px 0 0 5px;
     background: #fff;
     height: 100%;
     transition: width 0.5s linear;
 }
+.qustionWrap{
+    position: relative;
+    margin-top: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.textWrap{
+    width: 100vw;
+    position: relative;
+}
+.qustionWrap .qna{
+    width: 80vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    filter: drop-shadow(0.5px 0.7px 0.7px #000000);
+}
+.answerbtn{
+    position: relative;
+}
+.answerbtn:first-of-type{
+    margin-bottom: 20px;
+}
+.answerbtn p{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+/* 
+.Header p{
+    color: #fff;
+}
+
 .qustionWrap{
     position: relative;
     margin-bottom: 70px;
@@ -43,4 +91,4 @@
     border-radius: 5px;
     padding: 10px;
     background: #fff;  
-}
+} */

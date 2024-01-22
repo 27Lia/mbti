@@ -27,26 +27,3 @@ code {
 }
 
 /* 공통 css */
-.App {
-  background: #bbe309;
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
-  height: 100vh;
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  justify-content: center;
-  border: 1px solid #000;
-}
-
-@media only screen and (max-width: 400px) {
-    .qna {
-      font-size: 18px !important;
-    }
-  }
-  @media only screen and (max-width: 300px) {
-    .qna {
-      font-size: 13px !important;
-    }
-  }
