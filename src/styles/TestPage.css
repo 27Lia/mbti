@@ -13,9 +13,9 @@
     padding: 10px;
 }
 .progressBar{
-    width: 260px;
+    width: 300px;
     position: absolute;
-    top: 17%;
+    top: 16%;
     left: 50%;
     transform: translate(-50%, -30px);
     border: 3px solid #fff;
@@ -32,12 +32,12 @@
 }
 .qustionWrap{
     position: relative;
-    margin-top: 150px;
+    margin-top: 140px;
     text-align: center;
     margin-bottom: 20px;
 }
 .textWrap{
-    width: 80vw;
+    width: 100vw;
     position: relative;
     margin: 0 auto;
 }
@@ -48,15 +48,15 @@
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 45px;
-    font-size: 16px;
+    font-size: 18px;
     filter: drop-shadow(0.5px 0.7px 0.7px #000000);
 }
 .answerbtn{
     position: relative;
     height: 100px;
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 16px;
     padding: 40px;
     display: flex;
     align-items: center;
