@@ -10,14 +10,14 @@
     background-position: center calc(-63px)
 }
 .startBtn{
-    padding: 10px 3cqmin;
+    padding: 10px 30px;
     border: 2px solid #000;
     border-radius: 30px;
     position: absolute;
     bottom: 5px;
     left: 50%;
     letter-spacing: 5px;
-    transform: translate(-50%, -15px);
+    transform: translate(-50%, -7px);
     font-weight: bold;
     background: linear-gradient(to left top, #ffffff, #b0ff27);
     box-shadow: 1px 2px 4px #000000;
