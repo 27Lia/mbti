@@ -25,12 +25,18 @@ function ResultPage() {
     <div className="resultPage">
       {mbtiType ? (
         <div>
-          <img className="memberImg" src={memberImg} alt="멤버이미지"></img>
+          <img
+            className="memberImg"
+            src={memberImg}
+            alt="멤버이미지"
+            loading="lazy"
+          ></img>
           <div className="resultText">
             <img
               className="heart"
               src="/images/icon/heart.webp"
               alt="하트이미지"
+              loading="lazy"
             />
             <h1>
               당신의 유형은 <strong>{mbtiInfo.member[0].member} </strong>입니다.

@@ -60,7 +60,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    cursor: pointer;
     background: url(/public/images/icon/answer.webp) center / contain no-repeat;
+    
 }
 .answerbtn:first-of-type{
     margin-bottom: 20px;
