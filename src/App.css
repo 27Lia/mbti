@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 @font-face {
   font-family: 'SUITE-Regular';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
@@ -20,6 +20,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'SUITE-Regular';
+    font-display: swap;
   }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

@@ -2,7 +2,7 @@
     --vh: 100%;
 }
 .testPage{
-    background-image: url(/public/images/icon/bg_img.jpg);
+    background-image: url(/public/images/icon/bg_img.webp);
     height: calc(var(--vh, 1vh) * 100);
     background-size: cover;
     background-repeat: no-repeat;
@@ -65,7 +65,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(/public/images/icon/answer.png);
+    background-image: url(/public/images/icon/answer.webp);
 }
 .answerbtn:first-of-type{
     margin-bottom: 20px;

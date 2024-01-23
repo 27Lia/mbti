@@ -11,7 +11,7 @@ function App() {
       let vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty("--vh", `${vh}px`);
     }
-    setScreenSize(); 
+    setScreenSize();
 
     // 창 크기가 변경될 때마다 setScreenSize 호출
     window.addEventListener("resize", setScreenSize);
@@ -19,7 +19,7 @@ function App() {
     return () => {
       window.removeEventListener("resize", setScreenSize);
     };
-  }, []); 
+  }, []);
 
   return (
     <div className="App">

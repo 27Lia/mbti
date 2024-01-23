@@ -2,7 +2,7 @@
   --vh: 100%;
 }
 .resultPage{
-  background-image: url(/public/images/icon/bg_img.jpg);
+  background-image: url(/public/images/icon/bg_img.webp);
   height: calc(var(--vh, 1vh) * 100);
   background-size: cover;
   background-repeat: no-repeat;

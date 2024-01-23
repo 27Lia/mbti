@@ -48,28 +48,31 @@ function TestPage() {
   return (
     <div className="testPage">
       <div className="progressBar">
-        <div className="progressInner" style={{ width: `${progressWidth}%` }}></div>
+        <div
+          className="progressInner"
+          style={{ width: `${progressWidth}%` }}
+        ></div>
       </div>
       <div className="testContent">
         <div className="qustionWrap">
           <img
             className="textWrap"
-            src="/images/icon/question.png"
+            src="/images/icon/question.webp"
             alt="logo_image"
           />
           <p className="qna">{questionData[currentIndex].question}</p>
         </div>
         <div className="mb-8">
           <div className="answerWrap">
-          {questionData[currentIndex].options.map((option, index) => (
-            <div
-              className="answerbtn"
-              key={index}
-              onClick={() => handleOptionSelect(option.type)}
-            >
-              <p>{option.answer}</p>
-            </div>
-          ))}
+            {questionData[currentIndex].options.map((option, index) => (
+              <div
+                className="answerbtn"
+                key={index}
+                onClick={() => handleOptionSelect(option.type)}
+              >
+                <p>{option.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
