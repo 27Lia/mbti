@@ -29,7 +29,6 @@
   border: 2px solid #000;
   position: relative;
   font-size: 18px;
-  line-height: 1.6;
   box-shadow: 1px 1px 1px 2px #000000;
 }
 @keyframes floatUp {
@@ -51,7 +50,7 @@
   transform: translate(-50%);
   animation: floatUp 2s infinite; 
 }
-strong{
+h1 strong{
   font-size: 22px;
 }
 .retry-btn{
@@ -72,7 +71,7 @@ strong{
     width: 300px;
     height: 270px;
   }
-  strong{
+  h1 strong{
     font-size: 18px;
   }
   .resultText{

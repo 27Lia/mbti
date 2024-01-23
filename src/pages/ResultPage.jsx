@@ -9,6 +9,7 @@ function ResultPage() {
   const navigate = useNavigate();
   const mbtiInfo = mbtiData[mbtiType];
   const compatibleMember = mbtiInfo.compatibleTypes[0].description;
+  const name = mbtiInfo.compatibleTypes[0].name;
   const baseUrl = "https://mbti-one.vercel.app";
   const memberImg = mbtiInfo.member[0].memberImg;
 
@@ -47,6 +48,7 @@ function ResultPage() {
             <h2>
               당신과 어울리는 NCT 멤버는
               <br />
+              <strong>{name}</strong>
               {compatibleMember}
             </h2>
           </div>

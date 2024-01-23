@@ -1,6 +1,12 @@
 :root {
     --vh: 100%;
 }
+@font-face{
+    font-family:'DNFBitBitv2';
+    font-style:normal;
+    font-weight:400;
+    src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
+}
 .mainPage{
     background-image: url(/public/images/icon/main_img.webp);
     height: calc(var(--vh, 1vh) * 100);
@@ -12,18 +18,19 @@
     max-width: 500px;
 }
 .startBtn{
+    font-family:'DNFBitBitv2';
     padding: 10px 30px;
     border: 2px solid #000;
     border-radius: 30px;
     position: absolute;
     bottom: 8%;
     left: 50%;
+    color: #080808;
     letter-spacing: 5px;
     transform: translate(-50%, -5px);
-    font-weight: bold;
-    background: linear-gradient(to left top, #ffffff, #b0ff27);
+    font-weight: 900;
+    background: linear-gradient(to left top, #ffffff, #c4ff5f);
     box-shadow: 1px 2px 4px #000000;
-    
 }
 @media screen and (max-width: 500px) {
     .startBtn{
