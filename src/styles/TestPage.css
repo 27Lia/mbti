@@ -2,12 +2,10 @@
     --vh: 100%;
 }
 .testPage{
-    background-image: url(/public/images/icon/bg_img.webp);
+    background: url(/public/images/icon/bg_img.webp) center / cover no-repeat;
     height: calc(var(--vh, 1vh) * 100);
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    max-width: 425px;
+    /* max-width: 425px; */
     margin: 0 auto;
     border: 1px solid #000;
     padding: 10px;
@@ -62,10 +60,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(/public/images/icon/answer.webp);
+    background: url(/public/images/icon/answer.webp) center / contain no-repeat;
 }
 .answerbtn:first-of-type{
     margin-bottom: 20px;
@@ -73,12 +68,10 @@
 @media screen and (max-width: 500px) {
     .progressBar{
         width: 300px;
+        height: 25px;
     }
     .textWrap{
         width: 100vw;
-    }
-    .progressBar{
-        height: 25px;
     }
     .qustionWrap{
         margin: 140px 0 20px;

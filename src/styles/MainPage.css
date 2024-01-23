@@ -23,6 +23,7 @@
     font-weight: bold;
     background: linear-gradient(to left top, #ffffff, #b0ff27);
     box-shadow: 1px 2px 4px #000000;
+    
 }
 @media screen and (max-width: 500px) {
     .startBtn{
