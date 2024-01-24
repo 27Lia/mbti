@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
-
+import LodingPage from "./LodingPage";
 function ResultPage() {
   const location = useLocation();
   const mbtiType = location.state?.mbtiType;
@@ -24,7 +24,10 @@ function ResultPage() {
 
   return (
     <div className="resultPage">
-      {mbtiType ? (
+      {!isImgLoaded ? 
+      (<LodingPage />
+      ) : 
+      ( mbtiType ? (
         <div>
           <img
             className="memberImg"
@@ -58,6 +61,7 @@ function ResultPage() {
         </div>
       ) : (
         <p>MBTI 유형이 제공되지 않았습니다.</p>
+        )
       )}
       <br />
       <button
@@ -70,7 +74,7 @@ function ResultPage() {
         다시하기
       </button>
     </div>
-  );
+  )
 }
 
 export default ResultPage;
