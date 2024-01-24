@@ -6,7 +6,6 @@
     height: calc(var(--vh, 1vh) * 100);
     background-position: center;
     margin: 0 auto;
-    border: 1px solid #000;
     padding: 10px;
     margin: 0 auto;
     max-width: 500px;

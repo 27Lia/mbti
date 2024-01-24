@@ -25,7 +25,7 @@ function ResultPage() {
       // After image loaded, wait for 5 seconds and then hide the loading page
       setTimeout(() => {
         setShowLoading(false);
-      }, 3000);
+      }, 2000);
     };
 
     // 컴포넌트 언마운트 시 이벤트 리스너 해제
