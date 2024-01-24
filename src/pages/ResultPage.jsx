@@ -51,12 +51,18 @@ function ResultPage() {
     };
   }, [memberImg]);
 
-  const handleCopyClipBoard = async (text) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      alert("링크가 복사되었어요.");
-    } catch (err) {
-      console.log(err);
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "MBTI 결과 공유",
+          text: "나와 NCT 멤버의 궁합 결과를 확인해보세요!",
+          url: { baseUrl },
+        })
+        .then(() => console.log("공유 성공!"))
+        .catch((error) => console.log("공유에 실패했습니다", error));
+    } else {
+      alert("이 기능을 지원하지 않는 브라우저입니다.");
     }
   };
 
@@ -99,10 +105,7 @@ function ResultPage() {
       )}
       <br />
       <div className="btn-box" data-html2canvas-ignore="true">
-        <button
-          className="retry-btn"
-          onClick={() => handleCopyClipBoard(`${baseUrl}`)}
-        >
+        <button className="retry-btn" onClick={handleShare}>
           공유링크
         </button>
         <button className="retry-btn" onClick={handleSaveClick}>
