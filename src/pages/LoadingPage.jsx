@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/LodingPage.css";
+import "../styles/LoadingPage.css";
 
 function LodingPage() {
   // 이미지 정보를 담은 배열

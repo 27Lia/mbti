@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
-import LodingPage from "./LodingPage";
+import LoadingPage from "./LoadingPage";
 
 function ResultPage() {
   const location = useLocation();
@@ -16,7 +16,6 @@ function ResultPage() {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const [showLoading, setShowLoading] = useState(true);
 
-  console.log(compatibleMember);
   useEffect(() => {
     // 이미지 로드 이벤트 리스너 등록
     const imgElement = new Image();
@@ -46,7 +45,7 @@ function ResultPage() {
 
   return (
     <div className="resultPage">
-      {showLoading && <LodingPage />}
+      {showLoading && <LoadingPage />}
       {!showLoading && mbtiType ? (
         <div>
           <img
