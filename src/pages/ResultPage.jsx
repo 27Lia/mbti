@@ -11,7 +11,7 @@ function ResultPage() {
   const mbtiInfo = mbtiData[mbtiType];
   const compatibleMember = mbtiInfo.compatibleTypes[0].description;
   const name = mbtiInfo.compatibleTypes[0].name;
-  const baseUrl = "https://mbti-one.vercel.app";
+  const baseUrl = "https://nctmbti.vercel.app";
   const memberImg = mbtiInfo.member[0].memberImg;
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const [showLoading, setShowLoading] = useState(true);
