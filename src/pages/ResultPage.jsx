@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
@@ -15,24 +15,22 @@ function ResultPage() {
   const baseUrl = "https://nctmbti.vercel.app";
   const memberImg = mbtiInfo.member[0].memberImg;
   const [isImgLoaded, setIsImgLoaded] = useState(false);
-  // const resultPageRef = useRef();
+  const pageRef = useRef(null);
 
-  const handleShareResult = async () => {
-    try {
-      const element = document.querySelector(".resultPage");
-      const canvas = await html2canvas(element);
-      const image = canvas.toDataURL("image/png");
-      if (navigator.share) {
-        await navigator.share({
-          title: "NCT MBTI 결과",
-          text: "당신의 NCT MBTI 결과를 공유합니다.",
-          files: [new File([image], "result-page.png", { type: "image/png" })],
+  const handleSaveClick = () => {
+    if (pageRef.current) {
+      html2canvas(pageRef.current).then((canvas) => {
+        canvas.toBlob((blob) => {
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "page_screenshot.png";
+          a.style.display = "none";
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
         });
-      } else {
-        alert("죄송합니다. 브라우저가 공유 기능을 지원하지 않습니다.");
-      }
-    } catch (error) {
-      console.error("공유 중 오류 발생:", error);
+      });
     }
   };
 
@@ -61,7 +59,7 @@ function ResultPage() {
   };
 
   return (
-    <div className="resultPage">
+    <div className="resultPage" ref={pageRef}>
       {!isImgLoaded && <LoadingPage />}
       {isImgLoaded && mbtiType ? (
         <div>
@@ -101,11 +99,11 @@ function ResultPage() {
       <div className="btn-box">
         <button
           className="retry-btn"
-          onClick={() => handleCopyClipBoard(`${baseUrl}${location.pathname}`)}
+          onClick={() => handleCopyClipBoard(`${baseUrl}`)}
         >
           공유링크
         </button>
-        <button className="retry-btn" onClick={handleShareResult}>
+        <button className="retry-btn" onClick={handleSaveClick}>
           저장
         </button>
         <button className="retry-btn" onClick={() => navigate("/")}>
