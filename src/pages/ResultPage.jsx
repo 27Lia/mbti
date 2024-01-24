@@ -16,6 +16,7 @@ function ResultPage() {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const [showLoading, setShowLoading] = useState(true);
 
+  console.log(compatibleMember);
   useEffect(() => {
     // 이미지 로드 이벤트 리스너 등록
     const imgElement = new Image();
