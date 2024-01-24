@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
@@ -12,7 +12,7 @@ function ResultPage() {
   const name = mbtiInfo.compatibleTypes[0].name;
   const baseUrl = "https://mbti-one.vercel.app";
   const memberImg = mbtiInfo.member[0].memberImg;
-
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
   const handleCopyClipBoard = async (text) => {
     try {
       await navigator.clipboard.writeText(text);
@@ -30,8 +30,11 @@ function ResultPage() {
             className="memberImg"
             src={memberImg}
             alt="멤버이미지"
+            onLoad={()=> setIsImgLoaded(true)}
             loading="lazy"
           ></img>
+          
+          
           <div className="resultText">
             <img
               className="heart"
