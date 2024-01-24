@@ -23,7 +23,7 @@
     font-size: 20px;
 }
 .LodingHeart{
-    animation: floatUp 0.5s ease-out infinite alternate; 
+    animation: loding 0.5s ease-out infinite alternate; 
 }
 
 .LodingHeart:nth-child(2) {
@@ -34,7 +34,7 @@
     animation-delay: 0.5s;
 }
 
-@keyframes floatUp {
+@keyframes loding {
     100% {
         transform: translateY(-20px);
     }
