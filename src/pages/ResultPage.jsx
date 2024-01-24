@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
 import LoadingPage from "./LoadingPage";
-import html2canvas from "html2canvas";
+// import html2canvas from "html2canvas";
 
 function ResultPage() {
   const location = useLocation();
@@ -15,28 +15,25 @@ function ResultPage() {
   const baseUrl = "https://nctmbti.vercel.app";
   const memberImg = mbtiInfo.member[0].memberImg;
   const [isImgLoaded, setIsImgLoaded] = useState(false);
-  const resultPageRef = useRef();
+  // const resultPageRef = useRef();
 
-  const handleSaveAsImage = async () => {
-    const element = resultPageRef.current; // 현재 페이지의 DOM 요소
-
-    // 버튼을 제외한 내용을 복제하여 이미지로 저장
-    const clonedElement = element.cloneNode(true);
-    const buttons = clonedElement.querySelectorAll(".btn-box");
-    buttons.forEach((button) => {
-      button.style.display = "none"; // 버튼 숨김
-    });
-
-    const canvas = await html2canvas(clonedElement, {
-      useCORS: true, // 외부 이미지(CORS 정책) 문제 해결을 위해 추가
-      windowWidth: clonedElement.scrollWidth,
-      windowHeight: clonedElement.scrollHeight,
-    }); // 클론된 요소를 캔버스로 변환
-    const image = canvas.toDataURL("image/png"); // 캔버스를 이미지(PNG 형식)로 변환
-
-    // 모바일 브라우저에서는 window.open을 사용하여 이미지를 새 탭에서 열기
-    const newTab = window.open();
-    newTab.document.body.innerHTML = `<img src="${image}" style="width: 100%;" />`; // 새 탭에서 이미지를 표시
+  const handleShareResult = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "NCT MBTI 결과",
+          text: "당신의 NCT MBTI 결과를 공유합니다.",
+          url: `${baseUrl}${location.pathname}`,
+        })
+        .then(() => {
+          console.log("성공적으로 공유되었습니다.");
+        })
+        .catch((error) => {
+          console.error("공유 중 오류 발생:", error);
+        });
+    } else {
+      alert("죄송합니다. 브라우저가 공유 기능을 지원하지 않습니다.");
+    }
   };
 
   useEffect(() => {
@@ -64,8 +61,8 @@ function ResultPage() {
   };
 
   return (
-    <div className="resultPage" ref={resultPageRef}>
-      {!isImgLoaded && <LoadingPage />}{" "}
+    <div className="resultPage">
+      {!isImgLoaded && <LoadingPage />}
       {isImgLoaded && mbtiType ? (
         <div>
           <img
@@ -108,7 +105,7 @@ function ResultPage() {
         >
           공유링크
         </button>
-        <button className="retry-btn" onClick={handleSaveAsImage}>
+        <button className="retry-btn" onClick={handleShareResult}>
           저장
         </button>
         <button className="retry-btn" onClick={() => navigate("/")}>
