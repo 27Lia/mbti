@@ -19,11 +19,19 @@ function ResultPage() {
 
   const handleSaveAsImage = async () => {
     const element = resultPageRef.current; // 현재 페이지의 DOM 요소
-    const canvas = await html2canvas(element, {
+
+    // 버튼을 제외한 내용을 복제하여 이미지로 저장
+    const clonedElement = element.cloneNode(true);
+    const buttons = clonedElement.querySelectorAll(".btn-box");
+    buttons.forEach((button) => {
+      button.style.display = "none"; // 버튼 숨김
+    });
+
+    const canvas = await html2canvas(clonedElement, {
       useCORS: true, // 외부 이미지(CORS 정책) 문제 해결을 위해 추가
-      windowWidth: element.scrollWidth,
-      windowHeight: element.scrollHeight,
-    }); // 해당 요소를 캔버스로 변환
+      windowWidth: clonedElement.scrollWidth,
+      windowHeight: clonedElement.scrollHeight,
+    }); // 클론된 요소를 캔버스로 변환
     const image = canvas.toDataURL("image/png"); // 캔버스를 이미지(PNG 형식)로 변환
 
     // 모바일 브라우저에서는 window.open을 사용하여 이미지를 새 탭에서 열기
