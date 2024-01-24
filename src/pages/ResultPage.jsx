@@ -19,14 +19,16 @@ function ResultPage() {
 
   const handleSaveAsImage = async () => {
     const element = resultPageRef.current; // 현재 페이지의 DOM 요소
-    const canvas = await html2canvas(element); // 해당 요소를 캔버스로 변환
+    const canvas = await html2canvas(element, {
+      useCORS: true, // 외부 이미지(CORS 정책) 문제 해결을 위해 추가
+      windowWidth: element.scrollWidth,
+      windowHeight: element.scrollHeight,
+    }); // 해당 요소를 캔버스로 변환
     const image = canvas.toDataURL("image/png"); // 캔버스를 이미지(PNG 형식)로 변환
-    const link = document.createElement("a"); // 새로운 링크(a 태그)를 생성
-    link.href = image; // 링크의 href 속성을 이미지 URL로 설정
-    link.download = "result-page.png"; // 다운로드될 때 기본 파일 이름 설정
-    document.body.appendChild(link); // 생성한 링크를 body에 추가
-    link.click(); // 링크를 클릭하면 이미지 다운로드 시작
-    document.body.removeChild(link); // 사용이 끝난 링크를 body에서 제거
+
+    // 모바일 브라우저에서는 window.open을 사용하여 이미지를 새 탭에서 열기
+    const newTab = window.open();
+    newTab.document.body.innerHTML = `<img src="${image}" style="width: 100%;" />`; // 새 탭에서 이미지를 표시
   };
 
   useEffect(() => {
