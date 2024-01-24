@@ -20,8 +20,7 @@ function ResultPage() {
   const handleSaveClick = () => {
     if (pageRef.current) {
       html2canvas(pageRef.current, {
-        width: pageRef.current.offsetWidth,
-        height: pageRef.current.offsetHeight,
+        scale: 2,
       }).then((canvas) => {
         canvas.toBlob((blob) => {
           const url = window.URL.createObjectURL(blob);
@@ -99,7 +98,7 @@ function ResultPage() {
         <p>MBTI 유형이 제공되지 않았습니다.</p>
       )}
       <br />
-      <div className="btn-box">
+      <div className="btn-box" data-html2canvas-ignore="true">
         <button
           className="retry-btn"
           onClick={() => handleCopyClipBoard(`${baseUrl}`)}
