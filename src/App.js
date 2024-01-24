@@ -3,6 +3,7 @@ import "./App.css";
 import MainPage from "./pages/MainPage";
 import TestPage from "./pages/TestPage";
 import ResultPage from "./pages/ResultPage";
+import LodingPage from "./pages/LodingPage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/test" element={<TestPage />} />
         <Route path="/result" element={<ResultPage />} />
       </Routes>
+      <LodingPage />
     </div>
   );
 }

@@ -1,0 +1,41 @@
+.LodingPage{
+    background: url(/public/images/icon/bg_img.webp) center / cover no-repeat;
+    height: calc(var(--vh, 1vh) * 100);
+    background-position: center;
+    margin: 0 auto;
+    border: 1px solid #000;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.LodingHeart{
+    width: 50px;
+    height: 43px;
+}
+.LodingPage p{
+    font-size: 20px;
+}
+.LodingHeart{
+    animation: floatUp 0.5s ease-out infinite alternate; 
+}
+
+.LodingHeart:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.LodingHeart:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes floatUp {
+    100% {
+        transform: translateY(-20px);
+    }
+}
