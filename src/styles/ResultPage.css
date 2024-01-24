@@ -63,9 +63,9 @@ h1 strong{
   color: #bbe309;
   box-shadow: 0.5px 0.5px 0.5px 1px #000000;
 }
-.retry-btn:first-of-type{
+/* .retry-btn:first-of-type{
   margin-right: 20px;
-}
+} */
 @media screen and (max-width: 500px) {
   .memberImg{
     width: 300px;
@@ -83,4 +83,11 @@ h1 strong{
   .retry-btn{
     font-size: 16px;
   }
+}
+.btn-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  width: 350px;
 }
