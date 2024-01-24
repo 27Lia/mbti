@@ -21,7 +21,11 @@ function ResultPage() {
       console.log(err);
     }
   };
-
+  
+ const handleImageLoad = () => {
+  setIsImgLoaded(true)
+  }
+  
   return (
     <div className="resultPage">
       {!isImgLoaded ? 
@@ -33,7 +37,7 @@ function ResultPage() {
             className="memberImg"
             src={memberImg}
             alt="멤버이미지"
-            onLoad={()=> setIsImgLoaded(true)}
+            onLoad={handleImageLoad}
             loading="lazy"
           ></img>
           
