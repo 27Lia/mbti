@@ -19,17 +19,20 @@ function ResultPage() {
 
   const handleSaveClick = () => {
     if (pageRef.current) {
-      html2canvas(pageRef.current).then((canvas) => {
+      html2canvas(pageRef.current, {
+        width: pageRef.current.offsetWidth,
+        height: pageRef.current.offsetHeight,
+      }).then((canvas) => {
         canvas.toBlob((blob) => {
           const url = window.URL.createObjectURL(blob);
           const a = document.createElement("a");
           a.href = url;
-          a.download = "page_screenshot.png";
+          a.download = "page_screenshot.jpeg";
           a.style.display = "none";
           document.body.appendChild(a);
           a.click();
           window.URL.revokeObjectURL(url);
-        });
+        }, "image/jpeg");
       });
     }
   };
