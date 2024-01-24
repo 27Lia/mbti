@@ -1,8 +1,9 @@
-import React , {useState} from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
 import LodingPage from "./LodingPage";
+
 function ResultPage() {
   const location = useLocation();
   const mbtiType = location.state?.mbtiType;
@@ -13,6 +14,26 @@ function ResultPage() {
   const baseUrl = "https://mbti-one.vercel.app";
   const memberImg = mbtiInfo.member[0].memberImg;
   const [isImgLoaded, setIsImgLoaded] = useState(false);
+  const [showLoading, setShowLoading] = useState(true);
+
+  useEffect(() => {
+    // 이미지 로드 이벤트 리스너 등록
+    const imgElement = new Image();
+    imgElement.src = memberImg;
+    imgElement.onload = () => {
+      setIsImgLoaded(true);
+      // After image loaded, wait for 5 seconds and then hide the loading page
+      setTimeout(() => {
+        setShowLoading(false);
+      }, 3000);
+    };
+
+    // 컴포넌트 언마운트 시 이벤트 리스너 해제
+    return () => {
+      imgElement.onload = null;
+    };
+  }, [memberImg]);
+
   const handleCopyClipBoard = async (text) => {
     try {
       await navigator.clipboard.writeText(text);
@@ -21,27 +42,20 @@ function ResultPage() {
       console.log(err);
     }
   };
-  
- const handleImageLoad = () => {
-  setIsImgLoaded(true)
-  }
-  
+
   return (
     <div className="resultPage">
-      {!isImgLoaded ? 
-      (<LodingPage />
-      ) : 
-      ( mbtiType ? (
+      {showLoading && <LodingPage />}
+      {!showLoading && mbtiType ? (
         <div>
           <img
+            key="loading-image"
             className="memberImg"
             src={memberImg}
             alt="멤버이미지"
-            onLoad={handleImageLoad}
             loading="lazy"
           ></img>
-          
-          
+
           <div className="resultText">
             <img
               className="heart"
@@ -65,7 +79,6 @@ function ResultPage() {
         </div>
       ) : (
         <p>MBTI 유형이 제공되지 않았습니다.</p>
-        )
       )}
       <br />
       <button
@@ -78,7 +91,7 @@ function ResultPage() {
         다시하기
       </button>
     </div>
-  )
+  );
 }
 
 export default ResultPage;
