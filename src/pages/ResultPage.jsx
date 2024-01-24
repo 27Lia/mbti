@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
 import LoadingPage from "./LoadingPage";
-// import html2canvas from "html2canvas";
+import html2canvas from "html2canvas";
 
 function ResultPage() {
   const location = useLocation();
@@ -17,22 +17,22 @@ function ResultPage() {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   // const resultPageRef = useRef();
 
-  const handleShareResult = () => {
-    if (navigator.share) {
-      navigator
-        .share({
+  const handleShareResult = async () => {
+    try {
+      const element = document.querySelector(".resultPage");
+      const canvas = await html2canvas(element);
+      const image = canvas.toDataURL("image/png");
+      if (navigator.share) {
+        await navigator.share({
           title: "NCT MBTI 결과",
           text: "당신의 NCT MBTI 결과를 공유합니다.",
-          url: `${baseUrl}${location.pathname}`,
-        })
-        .then(() => {
-          console.log("성공적으로 공유되었습니다.");
-        })
-        .catch((error) => {
-          console.error("공유 중 오류 발생:", error);
+          files: [new File([image], "result-page.png", { type: "image/png" })],
         });
-    } else {
-      alert("죄송합니다. 브라우저가 공유 기능을 지원하지 않습니다.");
+      } else {
+        alert("죄송합니다. 브라우저가 공유 기능을 지원하지 않습니다.");
+      }
+    } catch (error) {
+      console.error("공유 중 오류 발생:", error);
     }
   };
 
