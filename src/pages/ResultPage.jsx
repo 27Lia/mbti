@@ -23,7 +23,6 @@ function ResultPage() {
   const memberImg = mbtiInfo?.member[0].memberImg;
 
   useEffect(() => {
-    // 암호화된 mbtiType 복호화
     if (encryptedMbtiType && secretKey) {
       try {
         const bytes = CryptoJS.AES.decrypt(encryptedMbtiType, secretKey);
