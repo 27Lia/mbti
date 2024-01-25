@@ -41,9 +41,9 @@
         ],
         "member": [
             {
-                "member": "'제노'",
-                "memberImg": "/images/member/제노.webp",
-                "description": "당신은 제노처럼 성실하고 순하며 물 흐르듯 유한 성격을 지닌 사람으로, 룰을 엄수하면서도 즉흥적입니다."
+                "member": "'태일'",
+                "memberImg": "/images/member/태일.webp",
+                "description": "당신은 태일처럼 부끄럼을 많이 타는 성격이지만 친해지면 한없이 친근해지며, 모든 상황에 유연하게 대처할 수 있는 무던한 사람입니다."
             }
         ]
     },
@@ -153,9 +153,9 @@
         ],
         "member": [
             {
-                "member": "'태일'",
-                "memberImg": "/images/member/태일.webp",
-                "description": "당신은 태일처럼 부끄럼을 많이 타는 성격이지만 친해지면 한없이 친근해지며, 모든 상황에 유연하게 대처할 수 있는 무던한 사람입니다."
+                "member": "'쿤'",
+                "memberImg": "/images/member/쿤.webp",
+                "description": "당신은 쿤처럼 화를 잘 못 내는 편이라, 화를 직접적으로 내진 않지만 몸소 보여주는 타입이며, 주변을 잘 챙기는 다정하고 봄바람 같은 사람입니다."
             }
         ]
     },
