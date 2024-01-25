@@ -5,13 +5,12 @@ import "../styles/ResultPage.css";
 import LoadingPage from "./LoadingPage";
 import html2canvas from "html2canvas";
 import CryptoJS from "crypto-js";
-
+import imageUrl from "../엔드림.webp";
 function ResultPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
   const pageRef = useRef(null);
-  const baseUrl = "https://nctmbti.vercel.app";
 
   const encryptedMbtiType = query.get("mbtiType");
   const [isImgLoaded, setIsImgLoaded] = useState(false);
@@ -21,7 +20,8 @@ function ResultPage() {
   const compatibleMember = mbtiInfo?.compatibleTypes[0].description;
   const name = mbtiInfo?.compatibleTypes[0].name;
   const memberImg = mbtiInfo?.member[0].memberImg;
-  const currentUrl = window.location.href; // 현재 페이지의 URL 가져오기
+  const currentUrl = window.location.href;
+  const kakaoApiKey = process.env.REACT_APP_KAKAO_API_KEY;
 
   useEffect(() => {
     if (encryptedMbtiType && secretKey) {
@@ -37,25 +37,6 @@ function ResultPage() {
       }
     }
   }, [encryptedMbtiType, secretKey]);
-
-  const handleSaveClick = () => {
-    if (pageRef.current) {
-      html2canvas(pageRef.current, {
-        scale: 2,
-      }).then((canvas) => {
-        canvas.toBlob((blob) => {
-          const url = window.URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = "page_screenshot.jpeg";
-          a.style.display = "none";
-          document.body.appendChild(a);
-          a.click();
-          window.URL.revokeObjectURL(url);
-        }, "image/jpeg");
-      });
-    }
-  };
 
   useEffect(() => {
     const imgElement = new Image();
@@ -87,16 +68,44 @@ function ResultPage() {
     }
   };
 
-  // const handleTwitterShare = () => {
-  //   const tweetText = "나와 NCT 멤버의 궁합 결과를 확인해보세요!";
-  //   const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(currentUrl)}`;
-  //   window.open(twitterShareUrl, "_blank");
-  // };
+  const handleTwitterShare = () => {
+    const tweetText = "나와 NCT 멤버의 궁합 결과를 확인해보세요!";
+    const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(currentUrl)}`;
+    window.open(twitterShareUrl, "_blank");
+  };
 
-  // const handleKakaoShare = () => {
-  //   const kakaoShareUrl = `https://www.kakaotalk.com/share?url=${encodeURIComponent(currentUrl)}`;
-  //   window.open(kakaoShareUrl, "_blank");
-  // };
+  const handleKakaoShare = async () => {
+    if (window.Kakao) {
+      window.Kakao.init(kakaoApiKey);
+      try {
+        await window.Kakao.Link.sendDefault({
+          objectType: "feed",
+          content: {
+            title: "NCT MBTI TEST !",
+            description: "나와 NCT 멤버의 궁합 결과를 확인해보세요!",
+            imageUrl: imageUrl,
+            link: {
+              mobileWebUrl: currentUrl,
+              webUrl: currentUrl,
+            },
+          },
+          buttons: [
+            {
+              title: "결과 보러가기",
+              link: {
+                mobileWebUrl: currentUrl,
+                webUrl: currentUrl,
+              },
+            },
+          ],
+        });
+      } catch (error) {
+        console.error("카카오 공유에 실패했습니다:", error);
+      }
+    } else {
+      alert("카카오톡 앱이 설치되어 있지 않습니다.");
+    }
+  };
 
   return (
     <div className="resultPage" ref={pageRef}>
@@ -140,18 +149,15 @@ function ResultPage() {
         <button className="retry-btn" onClick={handleShare}>
           공유링크
         </button>
-        <button className="retry-btn" onClick={handleSaveClick}>
-          저장
-        </button>
         <button className="retry-btn" onClick={() => navigate("/")}>
           다시하기
         </button>
-        {/* <button className="retry-btn" onClick={handleKakaoShare}>
+        <button className="retry-btn" onClick={handleKakaoShare}>
           카톡공유
         </button>
         <button className="retry-btn" onClick={handleTwitterShare}>
           트위터공유
-        </button> */}
+        </button>
       </div>
     </div>
   );
