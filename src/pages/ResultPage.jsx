@@ -4,20 +4,39 @@ import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
 import LoadingPage from "./LoadingPage";
 import html2canvas from "html2canvas";
+import CryptoJS from "crypto-js";
 
 function ResultPage() {
   const location = useLocation();
-  const query = new URLSearchParams(location.search);
-  const mbtiType = query.get("mbtiType"); // URL에서 mbtiType 쿼리 매개변수의 값을 가져옵니다.
-  // const mbtiType = location.state?.mbtiType;
   const navigate = useNavigate();
-  const mbtiInfo = mbtiData[mbtiType];
-  const compatibleMember = mbtiInfo.compatibleTypes[0].description;
-  const name = mbtiInfo.compatibleTypes[0].name;
-  const baseUrl = "https://nctmbti.vercel.app";
-  const memberImg = mbtiInfo.member[0].memberImg;
-  const [isImgLoaded, setIsImgLoaded] = useState(false);
+  const query = new URLSearchParams(location.search);
   const pageRef = useRef(null);
+  const baseUrl = "https://nctmbti.vercel.app";
+
+  const encryptedMbtiType = query.get("mbtiType");
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
+  const [mbtiType, setMbtiType] = useState("");
+  const secretKey = process.env.REACT_APP_SECRET_KEY;
+  const mbtiInfo = mbtiType ? mbtiData[mbtiType] : null;
+  const compatibleMember = mbtiInfo?.compatibleTypes[0].description;
+  const name = mbtiInfo?.compatibleTypes[0].name;
+  const memberImg = mbtiInfo?.member[0].memberImg;
+
+  useEffect(() => {
+    // 암호화된 mbtiType 복호화
+    if (encryptedMbtiType && secretKey) {
+      try {
+        const bytes = CryptoJS.AES.decrypt(encryptedMbtiType, secretKey);
+        const decryptedMbtiType = bytes.toString(CryptoJS.enc.Utf8);
+        if (!decryptedMbtiType) {
+          throw new Error("복호화 실패");
+        }
+        setMbtiType(decryptedMbtiType);
+      } catch (error) {
+        console.error("복호화에 실패했습니다:", error);
+      }
+    }
+  }, [encryptedMbtiType, secretKey]);
 
   const handleSaveClick = () => {
     if (pageRef.current) {

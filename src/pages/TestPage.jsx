@@ -2,10 +2,10 @@ import "../styles/TestPage.css";
 import { useNavigate } from "react-router-dom";
 import questionData from "../data/questions.json";
 import React, { useState } from "react";
+import CryptoJS from "crypto-js";
 
 function TestPage() {
   const navigate = useNavigate();
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [typeScores, setTypeScores] = useState({
     E: 0,
@@ -39,11 +39,14 @@ function TestPage() {
       setCurrentIndex(currentIndex + 1);
     } else {
       const mbtiType = calculateMBTIType();
-      // navigate("/result", { state: { mbtiType: mbtiType } });
-      navigate(`/result?mbtiType=${mbtiType}`);
+      const secretKey = process.env.REACT_APP_SECRET_KEY;
+      const encryptedMbtiType = CryptoJS.AES.encrypt(
+        mbtiType,
+        secretKey
+      ).toString();
+      navigate(`/result?mbtiType=${encodeURIComponent(encryptedMbtiType)}`);
     }
   };
-
   const progressWidth = ((currentIndex + 1) / questionData.length) * 100;
 
   return (
