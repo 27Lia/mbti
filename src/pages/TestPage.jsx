@@ -39,7 +39,8 @@ function TestPage() {
       setCurrentIndex(currentIndex + 1);
     } else {
       const mbtiType = calculateMBTIType();
-      navigate("/result", { state: { mbtiType: mbtiType } });
+      // navigate("/result", { state: { mbtiType: mbtiType } });
+      navigate(`/result?mbtiType=${mbtiType}`);
     }
   };
 

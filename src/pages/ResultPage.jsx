@@ -7,7 +7,9 @@ import html2canvas from "html2canvas";
 
 function ResultPage() {
   const location = useLocation();
-  const mbtiType = location.state?.mbtiType;
+  const query = new URLSearchParams(location.search);
+  const mbtiType = query.get("mbtiType"); // URL에서 mbtiType 쿼리 매개변수의 값을 가져옵니다.
+  // const mbtiType = location.state?.mbtiType;
   const navigate = useNavigate();
   const mbtiInfo = mbtiData[mbtiType];
   const compatibleMember = mbtiInfo.compatibleTypes[0].description;
