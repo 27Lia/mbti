@@ -87,16 +87,16 @@ function ResultPage() {
     }
   };
 
-  const handleTwitterShare = () => {
-    const tweetText = "나와 NCT 멤버의 궁합 결과를 확인해보세요!";
-    const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(currentUrl)}`;
-    window.open(twitterShareUrl, "_blank");
-  };
+  // const handleTwitterShare = () => {
+  //   const tweetText = "나와 NCT 멤버의 궁합 결과를 확인해보세요!";
+  //   const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(currentUrl)}`;
+  //   window.open(twitterShareUrl, "_blank");
+  // };
 
-  const handleKakaoShare = () => {
-    const kakaoShareUrl = `https://www.kakaotalk.com/share?url=${encodeURIComponent(currentUrl)}`;
-    window.open(kakaoShareUrl, "_blank");
-  };
+  // const handleKakaoShare = () => {
+  //   const kakaoShareUrl = `https://www.kakaotalk.com/share?url=${encodeURIComponent(currentUrl)}`;
+  //   window.open(kakaoShareUrl, "_blank");
+  // };
 
   return (
     <div className="resultPage" ref={pageRef}>
@@ -146,12 +146,12 @@ function ResultPage() {
         <button className="retry-btn" onClick={() => navigate("/")}>
           다시하기
         </button>
-        <button className="retry-btn" onClick={handleKakaoShare}>
+        {/* <button className="retry-btn" onClick={handleKakaoShare}>
           카톡공유
         </button>
         <button className="retry-btn" onClick={handleTwitterShare}>
           트위터공유
-        </button>
+        </button> */}
       </div>
     </div>
   );
