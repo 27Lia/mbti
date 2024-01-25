@@ -21,6 +21,7 @@ function ResultPage() {
   const compatibleMember = mbtiInfo?.compatibleTypes[0].description;
   const name = mbtiInfo?.compatibleTypes[0].name;
   const memberImg = mbtiInfo?.member[0].memberImg;
+  const currentUrl = window.location.href; // 현재 페이지의 URL 가져오기
 
   useEffect(() => {
     if (encryptedMbtiType && secretKey) {
@@ -72,8 +73,6 @@ function ResultPage() {
   }, [memberImg]);
 
   const handleShare = () => {
-    const currentUrl = window.location.href; // 현재 페이지의 URL 가져오기
-    console.log(currentUrl);
     if (navigator.share) {
       navigator
         .share({
@@ -86,6 +85,17 @@ function ResultPage() {
     } else {
       alert("이 기능을 지원하지 않는 브라우저입니다.");
     }
+  };
+
+  const handleTwitterShare = () => {
+    const tweetText = "나와 NCT 멤버의 궁합 결과를 확인해보세요!";
+    const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(currentUrl)}`;
+    window.open(twitterShareUrl, "_blank");
+  };
+
+  const handleKakaoShare = () => {
+    const kakaoShareUrl = `https://www.kakaotalk.com/share?url=${encodeURIComponent(currentUrl)}`;
+    window.open(kakaoShareUrl, "_blank");
   };
 
   return (
@@ -135,6 +145,12 @@ function ResultPage() {
         </button>
         <button className="retry-btn" onClick={() => navigate("/")}>
           다시하기
+        </button>
+        <button className="retry-btn" onClick={handleKakaoShare}>
+          카톡공유
+        </button>
+        <button className="retry-btn" onClick={handleTwitterShare}>
+          트위터공유
         </button>
       </div>
     </div>
