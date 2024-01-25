@@ -3,9 +3,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
 import LoadingPage from "./LoadingPage";
-import html2canvas from "html2canvas";
 import CryptoJS from "crypto-js";
-import imageUrl from "../엔드림.webp";
+import imageUrl from "../main_img.webp";
+
 function ResultPage() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ function ResultPage() {
   const memberImg = mbtiInfo?.member[0].memberImg;
   const currentUrl = window.location.href;
   const kakaoApiKey = process.env.REACT_APP_KAKAO_API_KEY;
-
+  console.log(kakaoApiKey);
   useEffect(() => {
     if (encryptedMbtiType && secretKey) {
       try {
@@ -145,18 +145,30 @@ function ResultPage() {
         <p>MBTI 유형이 제공되지 않았습니다.</p>
       )}
       <br />
-      <div className="btn-box" data-html2canvas-ignore="true">
-        <button className="retry-btn" onClick={handleShare}>
-          공유링크
+      <div className="btn-box">
+        <button onClick={handleTwitterShare}>
+          <img
+            className="btn-img"
+            src="../images/icon/twitter.png"
+            alt="카카오공유 버튼"
+          />
+        </button>
+        <button onClick={handleKakaoShare}>
+          <img
+            className="btn-img"
+            src="../images/icon/kakao.png"
+            alt="트위터공유 버튼"
+          />
+        </button>
+        <button onClick={handleShare}>
+          <img
+            className="btn-img"
+            src="../images/icon/link.png"
+            alt="공유링크 버튼"
+          />
         </button>
         <button className="retry-btn" onClick={() => navigate("/")}>
           다시하기
-        </button>
-        <button className="retry-btn" onClick={handleKakaoShare}>
-          카톡공유
-        </button>
-        <button className="retry-btn" onClick={handleTwitterShare}>
-          트위터공유
         </button>
       </div>
     </div>

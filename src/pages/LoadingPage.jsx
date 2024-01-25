@@ -4,11 +4,10 @@ import "../styles/LoadingPage.css";
 function LodingPage() {
   // 이미지 정보를 담은 배열
   const images = [
-    { src: "/images/icon/heart.webp" },
-    { src: "/images/icon/heart.webp" },
-    { src: "/images/icon/heart.webp" },
+    { src: "../images/icon/heart.webp" },
+    { src: "../images/icon/heart.webp" },
+    { src: "../images/icon/heart.webp" },
   ];
-
   return (
     <div className="LodingPage">
       <div className="content">
