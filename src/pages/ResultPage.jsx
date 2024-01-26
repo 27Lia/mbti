@@ -21,7 +21,7 @@ function ResultPage() {
   const memberImg = mbtiInfo?.member[0].memberImg;
   const currentUrl = window.location.href;
   const kakaoApiKey = process.env.REACT_APP_KAKAO_API_KEY;
-  console.log(kakaoApiKey);
+
   useEffect(() => {
     if (encryptedMbtiType && secretKey) {
       try {
