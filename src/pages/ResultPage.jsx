@@ -4,7 +4,6 @@ import mbtiData from "../data/nctMembers.json";
 import "../styles/ResultPage.css";
 import LoadingPage from "./LoadingPage";
 import CryptoJS from "crypto-js";
-import imageUrl from "../main_img.webp";
 
 function ResultPage() {
   const location = useLocation();
@@ -59,7 +58,6 @@ function ResultPage() {
         .share({
           title: "MBTI 결과 공유",
           text: "나와 NCT 멤버의 궁합 결과를 확인해보세요!",
-          url: currentUrl,
         })
         .then(() => console.log("공유 성공!"))
         .catch((error) => console.log("공유에 실패했습니다", error));
@@ -83,7 +81,7 @@ function ResultPage() {
           content: {
             title: "NCT MBTI TEST !",
             description: "나와 NCT 멤버의 궁합 결과를 확인해보세요!",
-            imageUrl: imageUrl,
+            imageUrl: window.location.origin + "/main_img.webp",
             link: {
               mobileWebUrl: currentUrl,
               webUrl: currentUrl,
