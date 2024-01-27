@@ -58,6 +58,7 @@ function ResultPage() {
         .share({
           title: "MBTI 결과 공유",
           text: "나와 NCT 멤버의 궁합 결과를 확인해보세요!",
+          url: currentUrl,
         })
         .then(() => console.log("공유 성공!"))
         .catch((error) => console.log("공유에 실패했습니다", error));
