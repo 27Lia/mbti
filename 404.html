@@ -1,6 +1,10 @@
 <script type="text/javascript">
-    document.location.href = "/mbti/";
-    </script>
+    // 현재 URL이 루트(/)가 아닐 경우, 루트(/)로 리다이렉트하고 경로를 유지합니다.
+    if (location.pathname !== "/") {
+        location.replace("/" + location.pathname);
+    }
+</script>
+
 
 
 <!doctype html>
