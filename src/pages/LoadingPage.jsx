@@ -4,9 +4,9 @@ import "../styles/LoadingPage.css";
 function LodingPage() {
   // 이미지 정보를 담은 배열
   const images = [
-    { src: process.env.PUBLIC_URL + "../images/icon/heart.webp" },
-    { src: process.env.PUBLIC_URL + "../images/icon/heart.webp" },
-    { src: process.env.PUBLIC_URL + "../images/icon/heart.webp" },
+    { src: process.env.PUBLIC_URL + "/images/icon/heart.webp" },
+    { src: process.env.PUBLIC_URL + "/images/icon/heart.webp" },
+    { src: process.env.PUBLIC_URL + "/images/icon/heart.webp" },
   ];
   return (
     <div className="LodingPage">
