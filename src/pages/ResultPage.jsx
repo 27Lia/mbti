@@ -148,21 +148,21 @@ function ResultPage() {
         <button onClick={handleTwitterShare}>
           <img
             className="btn-img"
-            src={process.env.PUBLIC_URL + "../images/icon/twitter.png"}
+            src={process.env.PUBLIC_URL + "/images/icon/twitter.png"}
             alt="카카오공유 버튼"
           />
         </button>
         <button onClick={handleKakaoShare}>
           <img
             className="btn-img"
-            src={process.env.PUBLIC_URL + "../images/icon/kakao.png"}
+            src={process.env.PUBLIC_URL + "/images/icon/kakao.png"}
             alt="트위터공유 버튼"
           />
         </button>
         <button onClick={handleShare}>
           <img
             className="btn-img"
-            src={process.env.PUBLIC_URL + "../images/icon/link.png"}
+            src={process.env.PUBLIC_URL + "/images/icon/link.png"}
             alt="공유링크 버튼"
           />
         </button>
