@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/%7Bmbti%7D/static/css/main.8e6f7d97.css",
-    "main.js": "/%7Bmbti%7D/static/js/main.3ddab2ec.js",
-    "static/media/main_img.webp": "/%7Bmbti%7D/static/media/main_img.52b54582d228f0d2b4e4.webp",
-    "static/media/bg_img.webp": "/%7Bmbti%7D/static/media/bg_img.8609a11e0e9246b4212f.webp",
-    "static/media/answer.webp": "/%7Bmbti%7D/static/media/answer.338ec7ab5bc05c990dc1.webp",
-    "index.html": "/%7Bmbti%7D/index.html",
-    "main.8e6f7d97.css.map": "/%7Bmbti%7D/static/css/main.8e6f7d97.css.map",
-    "main.3ddab2ec.js.map": "/%7Bmbti%7D/static/js/main.3ddab2ec.js.map"
+    "main.css": "/mbti/static/css/main.5e7270d3.css",
+    "main.js": "/mbti/static/js/main.3ddab2ec.js",
+    "static/media/main_img.webp": "/mbti/static/media/main_img.52b54582d228f0d2b4e4.webp",
+    "static/media/bg_img.webp": "/mbti/static/media/bg_img.8609a11e0e9246b4212f.webp",
+    "static/media/answer.webp": "/mbti/static/media/answer.338ec7ab5bc05c990dc1.webp",
+    "index.html": "/mbti/index.html",
+    "main.5e7270d3.css.map": "/mbti/static/css/main.5e7270d3.css.map",
+    "main.3ddab2ec.js.map": "/mbti/static/js/main.3ddab2ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e6f7d97.css",
+    "static/css/main.5e7270d3.css",
     "static/js/main.3ddab2ec.js"
   ]
 }
