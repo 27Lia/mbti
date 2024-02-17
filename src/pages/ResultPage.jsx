@@ -21,6 +21,7 @@ function ResultPage() {
   const memberImg = mbtiInfo?.member[0].memberImg;
   const currentUrl = window.location.href;
   const kakaoApiKey = process.env.REACT_APP_KAKAO_API_KEY;
+  const imagePath = `${process.env.PUBLIC_URL}${memberImg}`;
 
   useEffect(() => {
     if (encryptedMbtiType && secretKey) {
@@ -39,7 +40,7 @@ function ResultPage() {
 
   useEffect(() => {
     const imgElement = new Image();
-    imgElement.src = memberImg;
+    imgElement.src = imagePath;
     imgElement.onload = () => {
       setIsImgLoaded(true);
       setTimeout(() => {
@@ -50,7 +51,7 @@ function ResultPage() {
     return () => {
       imgElement.onload = null;
     };
-  }, [memberImg]);
+  }, [imagePath]);
 
   const handleShare = () => {
     if (navigator.share) {
@@ -114,7 +115,7 @@ function ResultPage() {
           <img
             key="loading-image"
             className="memberImg"
-            src={memberImg}
+            src={imagePath}
             alt="멤버이미지"
             loading="lazy"
           ></img>
