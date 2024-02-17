@@ -61,7 +61,7 @@ function TestPage() {
         <div className="qustionWrap">
           <img
             className="textWrap"
-            src="/images/icon/question.webp"
+            src={process.env.PUBLIC_URL + "/images/icon/question.webp"}
             alt="logo_image"
           />
           <p className="qna">{questionData[currentIndex].question}</p>

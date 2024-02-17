@@ -122,7 +122,7 @@ function ResultPage() {
           <div className="resultText">
             <img
               className="heart"
-              src="/images/icon/heart.webp"
+              src={process.env.PUBLIC_URL + "/images/icon/heart.webp"}
               alt="하트이미지"
               loading="lazy"
             />
