@@ -10,7 +10,7 @@
         "member": [
             {
                 "member": "제노",
-                "memberImg": "/images/member/제노.webp",
+                "memberImg": "/images/member/jeno.webp",
                 "description": "당신은 제노처럼 성실하고 순하며 물 흐르듯 유한 성격을 지닌 사람으로, 룰을 엄수하면서도 즉흥적입니다."
             }
         ]
@@ -26,7 +26,7 @@
         "member": [
             {
                 "member": "재민",
-                "memberImg": "/images/member/재민.webp",
+                "memberImg": "/images/member/jaemin.webp",
                 "description": "당신은 재민처럼 타인에게 따뜻하고 친절한 모습을 보이며, 주변과 원활하게 소통하고 순한 성격을 가지고 있습니다."
             }
         ]
@@ -42,7 +42,7 @@
         "member": [
             {
                 "member": "'태일'",
-                "memberImg": "/images/member/태일.webp",
+                "memberImg": "/images/member/taeil.webp",
                 "description": "당신은 태일처럼 부끄럼을 많이 타는 성격이지만 친해지면 한없이 친근해지며, 모든 상황에 유연하게 대처할 수 있는 무던한 사람입니다."
             }
         ]
@@ -58,7 +58,7 @@
         "member": [
             {
                 "member": "'NCT DREAM'",
-                "memberImg": "/images/member/엔드림.webp",
+                "memberImg": "/images/member/ndream.webp",
                 "description": "당신은 NCT DREAM처럼 그들만의 특별한 루틴과 틀림없는 원칙으로 실수하지 않도록 계획적이고 체계적입니다."
             }
         ]
@@ -74,7 +74,7 @@
         "member": [
             {
                 "member": "'지성'",
-                "memberImg": "/images/member/지성.webp",
+                "memberImg": "/images/member/jisung.webp",
                 "description": "당신은 지성처럼 목표 의식이 뚜렷하고, 깊이 있는 말과 진정성을 지니고 있으며, 자기 일에 대한 욕심과 열정이 강하고, 자신만의 세계가 확고합니다."
             }
         ]
@@ -90,7 +90,7 @@
         "member": [
             {
                 "member": "'마크'",
-                "memberImg": "/images/member/마크.webp",
+                "memberImg": "/images/member/mark.webp",
                 "description": "당신은 마크처럼 성실하고 겸손한 태도를 지니고 있으며, 언제나 긍정적으로 생각하는 성숙한 성격입니다."
             }
         ]
@@ -106,7 +106,7 @@
         "member": [
             {
                 "member": "'양양'",
-                "memberImg": "/images/member/양양.webp",
+                "memberImg": "/images/member/yangyang.webp",
                 "description": "당신은 양양과 같이 붙임성이 좋고 활발한 성격으로, 처음에는 조용해 보일 수 있지만 똑똑하고 계획적인 면모를 가지고 있습니다."
             }
         ]
@@ -122,7 +122,7 @@
         "member": [
             {
                 "member": "'도영'",
-                "memberImg": "/images/member/도영.webp",
+                "memberImg": "/images/member/dongyeong.webp",
                 "description": "똑부러지고 야무진 성격을 지녔지만, 의외로 눈물이 많아 주변사람들에게 놀림을 자주 당하며, 동시에 분석적인 사람입니다."
             }
         ]
@@ -138,7 +138,7 @@
         "member": [
             {
                 "member": "'해찬'",
-                "memberImg": "/images/member/해찬.webp",
+                "memberImg": "/images/member/haechan.webp",
                 "description": "당신은 해찬처럼 매우 긍정적이고 자신감 있는 편입니다. 무언가 새로운 것에 도전할 때는 적극적으로 나서며, 잘 할 수 있다고 믿고 시도하는 편입니다."
             }
         ]
@@ -154,7 +154,7 @@
         "member": [
             {
                 "member": "'쿤'",
-                "memberImg": "/images/member/쿤.webp",
+                "memberImg": "/images/member/kun.webp",
                 "description": "당신은 쿤처럼 화를 잘 못 내는 편이라, 화를 직접적으로 내진 않지만 몸소 보여주는 타입이며, 주변을 잘 챙기는 다정하고 봄바람 같은 사람입니다."
             }
         ]
@@ -170,7 +170,7 @@
         "member": [
             {
                 "member": "'유타'",
-                "memberImg": "/images/member/유타.webp",
+                "memberImg": "/images/member/yuta.webp",
                 "description": "당신은 유타처럼 분위기 메이커이고, 은근히 무뚝뚝한 모습도 있지만 본 마음은 따뜻하고 여린 다정한 사람입니다."
             }
         ]
@@ -186,7 +186,7 @@
         "member": [
             {
                 "member": "'재현'",
-                "memberImg": "/images/member/재현.webp",
+                "memberImg": "/images/member/jaehyun.webp",
                 "description": "당신은 재현처럼 본인의 감정을 숨기거나 거짓말을 못하는 솔직한 성격이며, 주변 사람들의 말을 잘 기억하는 섬세한 성격입니다."
             }
         ]
@@ -202,7 +202,7 @@
         "member": [
             {
                 "member": "'샤오쥔'",
-                "memberImg": "/images/member/샤오쥔.webp",
+                "memberImg": "/images/member/xiaojun.webp",
                 "description": "당신은 샤오쥔처럼 자기 자신을 열정적이면서도 재미있고, 온유한 성격으로 표현할 수 있으며, 인간 관계에서 활발하고 사교적인 사람입니다."
             }
         ]
@@ -218,7 +218,7 @@
         "member": [
             {
                 "member": "'쟈니'",
-                "memberImg": "/images/member/쟈니.webp",
+                "memberImg": "/images/member/johnny.webp",
                 "description": "당신은 쟈니처럼 센스가 탁월하고, 매너가 몸에 박혀있으며 엄청난 노력을 기울이는 노력파입니다. 또한 애교도 풍부하고 다정한 성격을 지닌 사람입니다."
             }
         ]
@@ -234,7 +234,7 @@
         "member": [
             {
                 "member": "천러",
-                "memberImg": "/images/member/천러.webp",
+                "memberImg": "/images/member/chenle.webp",
                 "description": "당신은 천러처럼 굉장히 밝고 명랑하며 말하는 것을 좋아합니다. 매사 긍정적이고 자신감 넘치는 호방한 성격을 가지고 있습니다."
             }
         ]
@@ -250,7 +250,7 @@
         "member": [
             {
                 "member": "'태용'",
-                "memberImg": "/images/member/태용.webp",
+                "memberImg": "/images/member/taeyoung.webp",
                 "description": "당신은 태용처럼 은근 허당기가 있고 애교가 많으며 사랑을 받고 싶어하는 스타일이지만, 동시에 엄청난 리더쉽을 가진 인재입니다."
             }
         ]
