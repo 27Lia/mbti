@@ -166,7 +166,7 @@ function ResultPage() {
             alt="공유링크 버튼"
           />
         </button>
-        <button className="retry-btn" onClick={() => navigate("/")}>
+        <button className="retry-btn" onClick={() => navigate("/mbti")}>
           다시하기
         </button>
       </div>
